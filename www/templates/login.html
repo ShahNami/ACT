@@ -1,0 +1,21 @@
+<div>
+ <ion-view title='<img src="img/logo.png" style="width:113.75px; height:32.5px; margin-top:5px;" class="nav-image"/>' hide-back-button="true">
+ <ion-nav-bar class="bar-dark"> </ion-nav-bar>
+ <ion-content ng-controller="LoginCtrl">
+  <div class="list list-inset">
+	  
+   <label class="item item-input"> <span class="input-label"><h4>Name</h4></span>
+    <input type="text" ng-model="login.name" placeholder="Name">
+   </label> <label class="item item-input"> <span class="input-label"><h4>Email</h4></span>
+    <input type="email" ng-model="login.email" placeholder="Email">
+   </label>
+   
+   <label><ion-scroll style="width: 100%; height: 5em; padding: 16px;">
+   </ion-scroll></label>
+   <ion-checkbox ng-model="login.checked" class="checkbox-assertive"><h4>I Accept the terms and conditions</h4></ion-checkbox>
+   <label>
+   <button class="button button-block button-assertive" ng-click="doLogin()">Log in</button></label>
+  </div>
+ </ion-content>
+ </ion-view>
+</div>
