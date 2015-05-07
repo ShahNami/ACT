@@ -18,6 +18,9 @@ angular.module('ACT', ['ionic', 'ACT.controllers', 'ACT.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
+    //db = $cordovaSQLite.openDB("act.db");
+    //$cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS questions (id integer primary key, mid integer foreign key, question text, answer text)");
+    //$cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS monuments (id integer primary key, name text, description text)");
   });
 })
 
@@ -32,6 +35,16 @@ angular.module('ACT', ['ionic', 'ACT.controllers', 'ACT.services'])
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html'
+  })
+
+  .state('scroll', {
+    url: '/scroll',
+    templateUrl: 'templates/scroll.html'
+  })
+
+  .state('quiz', {
+    url: '/quiz',
+    templateUrl: 'templates/quiz.html'
   })
   // setup an abstract state for the tabs directive
   .state('tab', {

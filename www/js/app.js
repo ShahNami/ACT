@@ -46,6 +46,10 @@ angular.module('ACT', ['ionic', 'ACT.controllers', 'ACT.services'])
     url: '/quiz',
     templateUrl: 'templates/quiz.html'
   })
+  .state('hint', {
+    url: '/hint',
+    templateUrl: 'templates/hint.html'
+  })
   // setup an abstract state for the tabs directive
   .state('tab', {
     url: "/tab",

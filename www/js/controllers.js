@@ -24,7 +24,8 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 		} else{
 			localStorage.setItem('logins', JSON.stringify($scope.login));
 			if(localStorage.getItem("firstrun") == null){
-				localStorage.setItem('firstrun', "true");
+				localStorage.setItem('firstrun', true);
+				localStorage.setItem('score', 0);
 				$state.go('scroll');
 			} else {
 				$state.go('tab.map');
@@ -46,17 +47,33 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 
 .controller('ScrollCtrl', function($scope, $state) {
 	if (localStorage.getItem("firstrun") == null) {
-		localStorage.setItem('firstrun', "true");
+		localStorage.setItem('firstrun', true);
+		localStorage.setItem('score', 0);
 	}
 })
 
 
-.controller('OverviewCtrl', function($scope, $ionicPopup, $state, Questions) {
-	var randomNum = Math.floor((Math.random() * 3)); //3 monuments for the moment
-	$scope.questions = Questions.get(randomNum); 
+.controller('OverviewCtrl', function($scope, $ionicPopup, $state, Questions, $document) {
+	var randomNum = 0;//Math.floor((Math.random() * 3)); //3 monuments for the moment
+	$scope.questions = Questions.get(randomNum);
+	console.log(randomNum);
 	$scope.startQuiz = function(){
+		$scope.disables = localStorage.getItem("Questionset["+randomNum+"]");
+		console.log($scope.disables);
 		$state.go("quiz");
+		for(i=0;i<3;i++){
+			console.log("INSIDE QUIZ");
+			if(localStorage.getItem("Questionset["+randomNum+"]["+i+"]") == "true"){
+				//var q = 'quiz'+i;
+				//console.log($document.getElementById("quiz1"));
+				//var x = $document[0].getElementById(q).disabled = true;
+				//console.log(x);
+			} else {
+				//console.log("Nop");
+			}
+		}
 	}
+
 
 	$scope.checkAnswer = function(questionId, choice){
 		localStorage.setItem("Questionset["+randomNum+"]["+questionId+"]", choice == Questions.get(randomNum)[questionId].answer);
@@ -69,8 +86,10 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 			console.log(localStorage.getItem("Questionset["+randomNum+"]["+i+"]"));
 			if(localStorage.getItem("Questionset["+randomNum+"]["+i+"]") == "true"){
 				count++;
+				localStorage.setItem("Hint")
 			}
 		}
+		localStorage.setItem("score", parseInt(localStorage.getItem("score")) + count);
 		$scope.showAlert = function() {
 			var alertPopup = $ionicPopup.alert({
 				title: '<h4>Your score</h4>',
@@ -82,6 +101,7 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 			});
 		}
 		$scope.showAlert();
+
 	}
 })
 
@@ -96,9 +116,39 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
   $scope.achievement = Achievements.get($stateParams.achievementId);
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true,
-	enableHighscore: true
+.controller('HintCtrl', function($scope, $state, Hints) {
+  	$scope.hints = Hints.get(localStorage.getItem("score"));
+})
+
+
+
+.controller('AccountCtrl', function($scope, $state, $timeout) {
+  $scope.account = {
+    friends: 11,
+	score: localStorage.getItem("score"),
+	rank: 31
   };
+
+	$scope.getHintPage = function(){
+  		$state.go("hint");
+	}
+
+  $scope.refreshTasks = function() {
+    console.log('Refreshing');
+    $timeout(function() {
+		$scope.account = {
+			friends: 11,
+			score: localStorage.getItem("score"),
+			rank: 31
+		};
+      $scope.$broadcast('scroll.refreshComplete');
+      $scope.$broadcast('scroll.refreshComplete');
+    }, 1250);
+  };
+
+  $scope.logOut = function(){
+  	localStorage.removeItem('logins');
+  	$state.go('login');
+  }
+
 });

@@ -18,6 +18,11 @@
   border-color: #e99524; 
 }
 
+.bar-assertive{
+  background: #cb1341!important;
+}
+
+
 
 /* TABS */
 .bar-stable.bar.bar-header.disable-user-behavior {
@@ -83,8 +88,11 @@
 
 .continueBtn{
   position:relative;
-  background-color:#CCC!important;
-  border-color: #CCC!important; 
+  background-color:#DDD!important;
+  border-bottom:solid 1px #EEE!important;
+  border-top:solid 1px #EEE!important;
+  border-left:none!important;
+  border-right:none!important;
   min-height:30px!important;
   float:left;
 }

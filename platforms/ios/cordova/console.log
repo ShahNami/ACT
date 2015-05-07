@@ -19,3 +19,30 @@
 2015-05-06 17:26:13.185 ACT[56963:6962310] Clicked
 2015-05-06 17:26:15.609 ACT[56963:6962310] Clicked
 2015-05-06 17:27:11.238 ACT[56963:6965090] Terminating since there is no system app.
+2015-05-07 11:58:41.617 ACT[59070:7802389] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/namishah/Library/Developer/CoreSimulator/Devices/02BE0CDA-987E-474D-AC86-A4DDE172C8DC/data/Containers/Data/Application/26E3A214-11A0-4CCF-B8A1-A98D23FC3A8C/Library/Cookies/Cookies.binarycookies
+2015-05-07 11:58:41.937 ACT[59070:7802389] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-07 11:58:41.938 ACT[59070:7802389] Multi-tasking -> Device: YES, App: YES
+2015-05-07 11:58:41.953 ACT[59070:7802389] Unlimited access to network resources
+2015-05-07 11:58:42.255 ACT[59070:7802389] [CDVTimer][keyboard] 0.050008ms
+2015-05-07 11:58:42.255 ACT[59070:7802389] [CDVTimer][TotalPluginStartup] 0.514984ms
+2015-05-07 11:58:42.480 ACT[59070:7802389] Resetting plugins due to page load.
+2015-05-07 11:58:42.772 ACT[59070:7802389] Finished load of: file:///Users/namishah/Library/Developer/CoreSimulator/Devices/02BE0CDA-987E-474D-AC86-A4DDE172C8DC/data/Containers/Bundle/Application/EC0790A3-3CFD-4333-85F5-93C6EE35FBE2/ACT.app/www/index.html#/tab/map
+2015-05-07 11:59:11.409 ACT[59070:7803174] Terminating since there is no system app.
+2015-05-07 14:28:42.590 ACT[59669:7895778] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/namishah/Library/Developer/CoreSimulator/Devices/02BE0CDA-987E-474D-AC86-A4DDE172C8DC/data/Containers/Data/Application/FE15D345-97FF-4B59-AA22-2DB1FBCA6C7D/Library/Cookies/Cookies.binarycookies
+2015-05-07 14:28:42.923 ACT[59669:7895778] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-07 14:28:42.924 ACT[59669:7895778] Multi-tasking -> Device: YES, App: YES
+2015-05-07 14:28:42.941 ACT[59669:7895778] Unlimited access to network resources
+2015-05-07 14:28:43.232 ACT[59669:7895778] [CDVTimer][keyboard] 0.052989ms
+2015-05-07 14:28:43.232 ACT[59669:7895778] [CDVTimer][TotalPluginStartup] 0.505030ms
+2015-05-07 14:28:43.457 ACT[59669:7895778] Resetting plugins due to page load.
+2015-05-07 14:28:43.713 ACT[59669:7895778] Finished load of: file:///Users/namishah/Library/Developer/CoreSimulator/Devices/02BE0CDA-987E-474D-AC86-A4DDE172C8DC/data/Containers/Bundle/Application/2CFE2EF8-F8C5-42BD-9949-2C87B7490B98/ACT.app/www/index.html#/tab/map
+2015-05-07 14:28:50.669 ACT[59669:7895778] INSIDE QUIZ
+2015-05-07 14:28:56.656 ACT[59669:7895778] true
+2015-05-07 14:28:56.657 ACT[59669:7895778] false
+2015-05-07 14:28:56.657 ACT[59669:7895778] true
+2015-05-07 14:28:58.382 ACT[59669:7895778] INSIDE QUIZ
+2015-05-07 14:29:13.962 ACT[59669:7895778] true
+2015-05-07 14:29:13.962 ACT[59669:7895778] false
+2015-05-07 14:29:13.962 ACT[59669:7895778] true
+2015-05-07 14:29:17.909 ACT[59669:7895778] Refreshing
+2015-05-07 14:29:20.796 ACT[59669:7895778] Refreshing

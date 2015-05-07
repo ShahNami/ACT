@@ -1,8 +1,8 @@
 <ion-view view-title="Overview">
-  <ion-content class="padding" style="background-image:url('img/bg-map.png'); background-size: 500px 800px; background-repeat: no-repeat;">
+  <ion-content class="padding" style="background-image:url('img/bg-map.png'); background-size: 500px 800px; background-repeat: no-repeat;" ng-controller="OverviewCtrl">
     
     <!-- QUESTION VIEW -->
-    
+
     <div class="list card">
       <div class="item item-avatar">
         <img src="img/questionmark.png"/>
@@ -13,29 +13,15 @@
       <div class="item item-image">
         <img src="img/culture/Cathedral/Cathedral1.jpg">
       </div>
-      <a class="item item-icon-left assertive" href="#">
+      <span class="item item-icon-left assertive" href="#">
         <i class="icon ion-information-circled"></i>
         Ask the local people!
+      </span>
+      <a class="item item-icon-left calm" ng-click="startQuiz()" href="#">
+        <i class="icon ion-play"></i>
+        Play the quiz
       </a>
     </div>
-    
 
-    <!-- QUIZ VIEW -->
-  
-    <div class="card">
-      <div class="item item-divider">
-        <img src="img/questionmark.png" style="float:left; width:25px; height:25px;"/>
-        <p style="float:left; font-weight:bold; font-size:15px; margin-top:3px; margin-left:20px;">How tall is the cathedral?</p>
-      </div>
-      <div class="item item-text-wrap">
-        <ion-radio ng-model="choice" ng-value="'131'">131 meters</ion-radio>
-        <ion-radio ng-model="choice" ng-value="'123'">123 meters</ion-radio>
-        <ion-radio ng-model="choice" ng-value="'100'">100 meters</ion-radio>
-      </div>
-      <div class="item item-divider">
-        <button class="button button-block button-assertive" ng-click="checkAnswer()">Submit your answer!</button></label>
-      </div>
-    </div>
-  
   </ion-content>
 </ion-view>

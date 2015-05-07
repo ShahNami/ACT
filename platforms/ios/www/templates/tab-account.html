@@ -1,12 +1,57 @@
 <ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    <ion-toggle  ng-model="settings.enableHighscore">
-        Enable Highscore
-    </ion-toggle>
-    </ion-list>
+  <ion-content ng-controller="AccountCtrl">
+      <ion-refresher pulling-text="Pull To Refresh" on-refresh="refreshTasks()" refreshing-text="Refreshing..." refreshing-icon="ion-loading-b">
+    </ion-refresher>
+<div class="list">
+    <div class="item item-divider">
+        Settings
+    </div>
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-flag"></i>
+    Change language
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-arrow-graph-down-right"></i>
+    Reset score
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-bookmark"></i>
+    Reset achievements
+  </a>
+
+    <div class="item item-divider">
+        Account
+    </div>
+    <a class="item item-icon-left" href="#">
+        <i class="icon ion-person-stalker"></i>
+        Friends
+        <span class="item-note" ng-model="account.friends">
+          {{account.friends}}
+        </span>
+  </a>
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-arrow-graph-up-right"></i>
+    Score
+    <span class="item-note" ng-model="account.score">
+      {{account.score}}
+    </span>
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-star"></i>
+    Ranking
+    <span class="item-note" ng-model="account.rank">
+      {{account.rank}}
+    </span>
+  </a>
+
+  <a class="item item-icon-left" ng-click="logOut()">
+    <i class="icon ion-log-out assertive"></i>
+    Log out
+  </a>
+
+</div>
   </ion-content>
 </ion-view>

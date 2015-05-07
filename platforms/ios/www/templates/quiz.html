@@ -1,0 +1,18 @@
+<ion-view view-title="Overview">
+  <ion-content class="padding" style="background-image:url('img/bg-map.png'); background-size: 500px 800px; background-repeat: no-repeat;" ng-controller="OverviewCtrl">
+
+    <!-- QUIZ VIEW -->
+    
+    <ion-list>
+      <ion-item class="" ng-repeat="question in questions" type="item-text-wrap">
+        <div class="bar wrapit bar-header bar-positive">
+          <h1 style="text-align:left;font-size:13px" class="title">{{question.question}}</h1>
+          <img ng-src="img/questionmark.png" style="float:right; width:30px; height:30px;">
+        </div>
+        </br></br>
+        <ion-radio ng-click="checkAnswer({{question.id}}, '{{choice}}')" ng-repeat="choice in question.choices" data-ng-attr-id="quiz{{question.id}}" ng-modal="choices" ng-attr-name="quiz{{question.id}}" ng-value="'{{choice}}'">{{choice}}</ion-radio>
+      </ion-item>
+      <button id="button" class="button button-block button-assertive" ng-click="submitAnswers()">Submit your answers!</button>
+    </ion-list>
+  </ion-content>
+</ion-view>

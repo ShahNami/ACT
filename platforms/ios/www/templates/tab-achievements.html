@@ -4,7 +4,7 @@
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="achievement in achievements" type="item-text-wrap" href="#/tab/achievements/{{achievement.id}}">
         <img ng-src="{{achievement.face}}1.jpg">
         <h2>{{achievement.name}}</h2>
-        <p>{{achievement.lastText}}</p>
+        <p style="overflow:ellipse;">{{achievement.description}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
