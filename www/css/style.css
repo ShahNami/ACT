@@ -96,3 +96,23 @@
   min-height:30px!important;
   float:left;
 }
+
+.hint{
+  width:100%!important;
+  height:100%!important;
+  
+}
+.hint h2{
+  font-family: parchment;
+  font-size: 20px!important;
+  margin-left:5px!important;
+  margin-right:5px!important;
+  margin-top:5px;
+  padding:10px!important;
+}
+
+.hint h2 span{
+  font-family:flocked; 
+  font-size:30px; 
+  padding:10px;
+}

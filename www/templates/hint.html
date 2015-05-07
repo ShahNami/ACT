@@ -1,9 +1,11 @@
 <ion-view view-title="Hints">
   <ion-content ng-controller="HintCtrl">
     <ion-list>
-      <ion-item class="item-remove-animate" ng-repeat="hint in hints" style="" type="">
-        <h2>{{hint.hint}}</h2>
-      </ion-item>
+      <div class="hint" ng-repeat="hint in hints" style="" type="">
+        <h2><span>{{hint.id+1}}.</span>{{hint.hint}}</h2>
+        <hr/>
+      </div>
     </ion-list>
+    <button id="button" class="button button-block button-assertive" ng-click="returnToAccount()">Return</button>
   </ion-content>
 </ion-view>

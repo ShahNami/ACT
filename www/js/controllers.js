@@ -56,22 +56,8 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 .controller('OverviewCtrl', function($scope, $ionicPopup, $state, Questions, $document) {
 	var randomNum = 0;//Math.floor((Math.random() * 3)); //3 monuments for the moment
 	$scope.questions = Questions.get(randomNum);
-	console.log(randomNum);
 	$scope.startQuiz = function(){
-		$scope.disables = localStorage.getItem("Questionset["+randomNum+"]");
-		console.log($scope.disables);
 		$state.go("quiz");
-		for(i=0;i<3;i++){
-			console.log("INSIDE QUIZ");
-			if(localStorage.getItem("Questionset["+randomNum+"]["+i+"]") == "true"){
-				//var q = 'quiz'+i;
-				//console.log($document.getElementById("quiz1"));
-				//var x = $document[0].getElementById(q).disabled = true;
-				//console.log(x);
-			} else {
-				//console.log("Nop");
-			}
-		}
 	}
 
 
@@ -86,7 +72,6 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 			console.log(localStorage.getItem("Questionset["+randomNum+"]["+i+"]"));
 			if(localStorage.getItem("Questionset["+randomNum+"]["+i+"]") == "true"){
 				count++;
-				localStorage.setItem("Hint")
 			}
 		}
 		localStorage.setItem("score", parseInt(localStorage.getItem("score")) + count);
@@ -118,6 +103,9 @@ angular.module('ACT.controllers', ['ionic', 'ui.router'])
 
 .controller('HintCtrl', function($scope, $state, Hints) {
   	$scope.hints = Hints.get(localStorage.getItem("score"));
+  	$scope.returnToAccount = function(){
+  		$state.go("tab.account");
+  	}
 })
 
 
