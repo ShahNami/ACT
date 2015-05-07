@@ -1,0 +1,18 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{achievement.name}}">
+  <ion-content class="padding">
+    <img ng-src="{{achievement.face}}1.jpg" style="margin-left:3px; width: 64px; height: 64px"/>
+    <img ng-src="{{achievement.face}}2.jpg" style="margin-left:3px; width: 64px; height: 64px"/>
+    <img ng-src="{{achievement.face}}3.jpg" style="margin-left:3px; width: 64px; height: 64px"/>
+    <img ng-src="{{achievement.face}}4.jpg" style="margin-left:3px; width: 64px; height: 64px"/>
+    <img ng-src="{{achievement.face}}5.jpg" style="margin-left:3px; width: 64px; height: 64px"/>
+    <p style="padding:10px; text-align: justify; text-justify: inter-word;">
+      {{achievement.description}}
+    </p>
+  </ion-content>
+</ion-view>

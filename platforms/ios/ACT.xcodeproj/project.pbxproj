@@ -43,6 +43,10 @@
 		F3D0327A87D644349D34A81D /* UIWebViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2667149C4964CB5A5783F50 /* UIWebViewExtension.m */; };
 		D9FB0DFD09BF46DF844C7CA4 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C4EEF948ED45A09C3E3370 /* CDVLogger.m */; };
 		70874C94A22240C1B00F9869 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9CD21F816042C99D772362 /* CDVDevice.m */; };
+		BBAEBD79301B44358C82671B /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F013255BAFE04246BC6EF8E7 /* CDVLocation.m */; };
+		6982113F4BD14329B66C08B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99F75472B584ECA93556B93 /* CoreLocation.framework */; };
+		FED485A9402845CFABB0EC7F /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A257AB6DE24C89AAC6CC4E /* SQLitePlugin.m */; };
+		F40D4FDE3F5B43089F48320A /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 80477C718EFF4A6B82DA3547 /* sqlite3.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,13 @@
 		288EB020FE7A4B1E877EAC61 /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		BE9CD21F816042C99D772362 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		8335BF2996AE49B1A7D453FE /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		F013255BAFE04246BC6EF8E7 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		0948412394CF4FE8B4BCDF99 /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C99F75472B584ECA93556B93 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		61A257AB6DE24C89AAC6CC4E /* SQLitePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SQLitePlugin.m"; path = "io.litehelpers.cordova.sqlite/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		80477C718EFF4A6B82DA3547 /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "sqlite3.c"; path = "io.litehelpers.cordova.sqlite/sqlite3.c"; sourceTree = "<group>"; fileEncoding = 4; };
+		77E6127FD3594A2AAB78FF42 /* SQLitePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SQLitePlugin.h"; path = "io.litehelpers.cordova.sqlite/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		8FA842BB7C8840EEB1F74CF2 /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "sqlite3.h"; path = "io.litehelpers.cordova.sqlite/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +138,7 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				6982113F4BD14329B66C08B0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +211,7 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				C99F75472B584ECA93556B93 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,6 +235,12 @@
 				288EB020FE7A4B1E877EAC61 /* CDVLogger.h */,
 				BE9CD21F816042C99D772362 /* CDVDevice.m */,
 				8335BF2996AE49B1A7D453FE /* CDVDevice.h */,
+				F013255BAFE04246BC6EF8E7 /* CDVLocation.m */,
+				0948412394CF4FE8B4BCDF99 /* CDVLocation.h */,
+				61A257AB6DE24C89AAC6CC4E /* SQLitePlugin.m */,
+				80477C718EFF4A6B82DA3547 /* sqlite3.c */,
+				77E6127FD3594A2AAB78FF42 /* SQLitePlugin.h */,
+				8FA842BB7C8840EEB1F74CF2 /* sqlite3.h */,
 			);
 			name = Plugins;
 			path = "ACT/Plugins";
@@ -410,6 +429,9 @@
 				F3D0327A87D644349D34A81D /* UIWebViewExtension.m in Sources */,
 				D9FB0DFD09BF46DF844C7CA4 /* CDVLogger.m in Sources */,
 				70874C94A22240C1B00F9869 /* CDVDevice.m in Sources */,
+				BBAEBD79301B44358C82671B /* CDVLocation.m in Sources */,
+				FED485A9402845CFABB0EC7F /* SQLitePlugin.m in Sources */,
+				F40D4FDE3F5B43089F48320A /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

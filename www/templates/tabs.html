@@ -5,18 +5,23 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
+  <!-- Map Tab -->
+  <ion-tab title="Map" icon-off="ion-map" icon-on="ion-map" href="#/tab/map">
+    <ion-nav-view name="tab-map"></ion-nav-view>
+  </ion-tab>
+
   <!-- Overview Tab -->
-  <ion-tab title="Overview" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/overview">
+  <ion-tab title="Overview" icon-off="ion-clipboard" icon-on="ion-clipboard" href="#/tab/overview">
     <ion-nav-view name="tab-overview"></ion-nav-view>
   </ion-tab>
 
   <!-- Achievement Tab -->
-  <ion-tab title="Achievements" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/achievements">
+  <ion-tab title="Achievements" icon-off="ion-trophy" icon-on="ion-trophy" href="#/tab/achievements">
     <ion-nav-view name="tab-achievements"></ion-nav-view>
   </ion-tab>
 
   <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
+  <ion-tab title="Account" icon-off="ion-person" icon-on="ion-person" href="#/tab/account">
     <ion-nav-view name="tab-account"></ion-nav-view>
   </ion-tab>
 

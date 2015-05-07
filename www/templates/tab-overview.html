@@ -1,28 +1,27 @@
 <ion-view view-title="Overview">
-  <ion-content class="padding">
+  <ion-content class="padding" style="background-image:url('img/bg-map.png'); background-size: 500px 800px; background-repeat: no-repeat;" ng-controller="OverviewCtrl">
+    
+    <!-- QUESTION VIEW -->
+
     <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
-        </div>
+      <div class="item item-avatar">
+        <img src="img/questionmark.png"/>
+        <h2>Can you find this building? </h2>
+        <p>This building is more then 660 years old!</p>
       </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
+
+      <div class="item item-image">
+        <img src="img/culture/Cathedral/Cathedral1.jpg">
       </div>
+      <span class="item item-icon-left assertive" href="#">
+        <i class="icon ion-information-circled"></i>
+        Ask the local people!
+      </span>
+      <a class="item item-icon-left calm" ng-click="startQuiz()" href="#">
+        <i class="icon ion-play"></i>
+        Play the quiz
+      </a>
     </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
+
   </ion-content>
 </ion-view>

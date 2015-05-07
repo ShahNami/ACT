@@ -1,0 +1,12 @@
+<ion-view view-title="Achievements">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="achievement in achievements" type="item-text-wrap" href="#/tab/achievements/{{achievement.id}}">
+        <img ng-src="{{achievement.face}}1.jpg">
+        <h2>{{achievement.name}}</h2>
+        <p>{{achievement.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
